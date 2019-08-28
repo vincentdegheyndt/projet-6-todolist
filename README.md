@@ -1,6 +1,8 @@
 # projet-6-todolist
 
-# Instructions de Becode :
+Un grand merci à Frédérick Van Isschot pour son aide précieuse.
+
+# Instructions originales de Becode :
 
 # To-do list, en php
 

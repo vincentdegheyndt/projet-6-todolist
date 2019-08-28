@@ -1,0 +1,13 @@
+#todoList{
+    list-style-type:none;
+    :before{
+        content:"☐ "
+    }
+}
+.checked{
+    list-style-type:none;
+    color:grey;
+    &:before{
+        content: "☒ "!important
+    }
+}

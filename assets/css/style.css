@@ -1,0 +1,17 @@
+@charset "UTF-8";
+#todoList {
+  list-style-type: none;
+}
+
+#todoList :before {
+  content: "☐ ";
+}
+
+.checked {
+  list-style-type: none;
+  color: grey;
+}
+
+.checked:before {
+  content: "☒ " !important;
+}

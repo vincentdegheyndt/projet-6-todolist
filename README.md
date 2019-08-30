@@ -1,5 +1,14 @@
 # projet-6-todolist
 
+Toujours en cours.
+
+il reste :
+
+    - sauvegarder les changements d'états
+    - rajouter le drag and drop
+    - améliorer le css
+
+
 Un grand merci à Frédérick Van Isschot et Corentin Deblock pour leur aide précieuse.
 
 # Instructions originales de Becode :

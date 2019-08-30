@@ -11,3 +11,14 @@
         content: "☒ "!important
     }
 }
+
+#archive{
+    list-style-type:none;
+    text-decoration: line-through;
+    color:grey;
+    
+    :before{
+        content: "☒ "!important;
+    }
+
+}

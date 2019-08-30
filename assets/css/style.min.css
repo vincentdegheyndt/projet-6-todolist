@@ -1,1 +1,1 @@
-#todoList{list-style-type:none}#todoList :before{content:"☐ "}.checked{list-style-type:none;color:grey}.checked:before{content:"☒ " !important}
+#todoList{list-style-type:none}#todoList :before{content:"☐ "}.checked{list-style-type:none;color:grey}.checked:before{content:"☒ " !important}#archive{list-style-type:none;text-decoration:line-through;color:grey}#archive :before{content:"☒ " !important}

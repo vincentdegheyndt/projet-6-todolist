@@ -18,4 +18,6 @@ if(isset($_POST["data"])){
     $dataSend = json_encode($newTask);
     echo $dataSend;
 }
+
+
 ?>

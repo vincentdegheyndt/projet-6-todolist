@@ -15,3 +15,13 @@
 .checked:before {
   content: "☒ " !important;
 }
+
+#archive {
+  list-style-type: none;
+  text-decoration: line-through;
+  color: grey;
+}
+
+#archive :before {
+  content: "☒ " !important;
+}

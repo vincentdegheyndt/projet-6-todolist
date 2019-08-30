@@ -1,5 +1,16 @@
 <?php  
 
+$json = file_get_contents('todo.json');
+$data = json_decode($json, true);
+
+foreach ($data['items'] as $result){
+    if($result['archive']){
+        $archives .= "<li id=".$result['id']." checked=".($result['check'] ? 'checked' : 'unchecked')." archived=".($result['archive'] ? "yes" : "no" ).">".$result['text']."</li>";
+    }else{
+        $tasks .= "<li id=".$result['id']." onClick='checkStart(this)' checked=".($result['check'] ? 'checked' : 'unchecked')." archived=".($result['archive'] ? "yes" : "no" ).">".$result['text']."</li>";
+    }    
+};
+
 
 ?>
 <!DOCTYPE html>
@@ -18,20 +29,22 @@
         <tr>
             <td>
             <ul id="todoList" class="">
-
+                <?php 
+                echo $tasks; 
+                ?>
             </ul>
             </td>
         </tr>
         <tr>
-            <td><button name="save">Enregistrer</button></td>
+            <td><button id="addArchive">Archiver</button></td>
         </tr>
         <tr><td><p>Archive</p></td></tr>
         <tr>
             <td>
-            <ul>
-                <li>Premier fini</li>
-                <li>Deuxième fini</li>
-                <li>Troisième fini</li>
+            <ul id="archive">
+            <?php 
+                echo $archives; 
+            ?>
             </ul>
             </td>
         </tr>
@@ -49,6 +62,7 @@
                 </tr>
             </table>
         </form>
+        <p id="response"></p>
     <script src="main.js"></script>
     <script>
 

@@ -1,6 +1,6 @@
 # projet-6-todolist
 
-Un grand merci à Frédérick Van Isschot pour son aide précieuse.
+Un grand merci à Frédérick Van Isschot et Corentin Deblock pour leur aide précieuse.
 
 # Instructions originales de Becode :
 

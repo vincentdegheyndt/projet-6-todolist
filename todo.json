@@ -36,6 +36,12 @@
             "text": "tester",
             "check": false,
             "archive": false
+        },
+        {
+            "id": 7,
+            "text": "premier essai de sanitisation",
+            "check": false,
+            "archive": false
         }
     ]
 }

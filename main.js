@@ -74,7 +74,7 @@ document.getElementById("addArchive").addEventListener('click', (e)=>{
         update.onreadystatechange = function(event){//déclenché par la fin ded l'éxécution du php
             if(this.readyState === XMLHttpRequest.DONE){
                 document.getElementById("response").innerHTML = this.responseText;
-                //location.reload();
+                location.reload();
 
             }
         }

@@ -41,7 +41,7 @@
             "id": 7,
             "text": "premier essai de sanitisation",
             "check": false,
-            "archive": false
+            "archive": true
         }
     ]
 }

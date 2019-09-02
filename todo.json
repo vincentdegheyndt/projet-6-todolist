@@ -1,27 +1,39 @@
 {
-    "increment": 4,
+    "increment": 6,
     "items": [
         {
             "id": 1,
-            "text": "dormir",
-            "check": false,
-            "archive": false
+            "text": "stocker les t\u00e2ches au format json",
+            "check": true,
+            "archive": true
         },
         {
             "id": 2,
-            "text": "dormir beaucoup",
-            "check": false,
-            "archive": false
+            "text": "lire le contenu du fichier json et afficher les t\u00e2ches et archives",
+            "check": true,
+            "archive": true
         },
         {
             "id": 3,
-            "text": "afzefze",
+            "text": "sauvegarder les changements d'\u00e9tats (refresh de la page)",
             "check": false,
-            "archive": false
+            "archive": true
         },
         {
             "id": 4,
-            "text": "bien manger ce soir",
+            "text": "rajouter le drag and drop",
+            "check": false,
+            "archive": true
+        },
+        {
+            "id": 5,
+            "text": "am\u00e9liorer le css",
+            "check": false,
+            "archive": true
+        },
+        {
+            "id": 6,
+            "text": "tester",
             "check": false,
             "archive": false
         }

@@ -1,3 +1,5 @@
+
+
 document.getElementById("addTask").addEventListener('click', (e)=>{
     e.preventDefault();
     let activity = document.getElementById("activity");
@@ -21,20 +23,23 @@ document.getElementById("addTask").addEventListener('click', (e)=>{
             let li = document.createElement("LI");
             let textnode = document.createTextNode(reponse.text);
             li.appendChild(textnode);
-
-            li.onclick = check;
-            document.getElementById("todoList").appendChild(li);
+            li.id = reponse.id;
+            li.onclick = function(){
+                    this.classList.toggle("checked");
+                    this.check == false? this.check = true : this.check=false;
+                    console.log(this.check);
+            };
+            li.classList.add('column');
+            li.setAttribute("draggable",true)
+            document.getElementById("columns").appendChild(li);
             activity.value = "";
+            location.reload();
             console.log(reponse.id)
         }
     }
 
 })
-function check(){
-    this.classList.toggle("checked");
-    this.check == false? this.check = true : this.check=false;
-    console.log(this.check)
-};
+
 function checkStart(target) {
     target.classList.toggle("checked");
     target.check == false? target.check = true : target.check=false;
@@ -44,29 +49,36 @@ function checkStart(target) {
 
 document.getElementById("addArchive").addEventListener('click', (e)=>{
     e.preventDefault();
-    let archived = document.querySelectorAll("li.checked");
-
-
+    let archived = document.querySelectorAll("#columns > li.checked");
+    let modifs = [];
     archived.forEach(element => {
         document.getElementById("archive").appendChild(element);
         element.onclick="";
         element.archive=true;
+        let modified = new Object();
+        modified.id = element.id;
+        modified.check= element.check;
+        modified.archive = element.archive;
+        modifs.push(modified);
 
-        const update = new XMLHttpRequest();
+        console.log(modifs);
+    });
+        let update = new XMLHttpRequest();
 
         update.open("POST","edit.php", true);
         // important sinon php ne sait pas à quoi il a affaire
         update.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
     
-        update.send("edit="+JSON.stringify(archived));
+        update.send("edit="+JSON.stringify(modifs));
         
         update.onreadystatechange = function(event){//déclenché par la fin ded l'éxécution du php
             if(this.readyState === XMLHttpRequest.DONE){
-                document.getElementById("response").innerHTML = update.responseText
+                document.getElementById("response").innerHTML = this.responseText;
                 //location.reload();
-                console.log(archived)
+
             }
         }
+
 /*
         formData.append('data',element)
 
@@ -75,8 +87,9 @@ document.getElementById("addArchive").addEventListener('click', (e)=>{
             body:formData
         })
 */
-    });
+
 })
+
 
 
 

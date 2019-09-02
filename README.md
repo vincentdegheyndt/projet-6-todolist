@@ -1,17 +1,10 @@
 # projet-6-todolist
 
-Toujours en cours.
+Project working.
 
-il reste :
+A big thank you to Frédérick Van Isschot and Corentin Deblock for their invaluable help;
 
-    - sauvegarder les changements d'états
-    - rajouter le drag and drop
-    - améliorer le css
-
-
-Un grand merci à Frédérick Van Isschot et Corentin Deblock pour leur aide précieuse.
-
-# Instructions originales de Becode :
+#  Original Instructions from Becode in french:
 
 # To-do list, en php
 

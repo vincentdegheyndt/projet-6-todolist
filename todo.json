@@ -36,12 +36,6 @@
             "text": "tester",
             "check": false,
             "archive": false
-        },
-        {
-            "id": 7,
-            "text": "azdzd",
-            "check": false,
-            "archive": false
         }
     ]
 }

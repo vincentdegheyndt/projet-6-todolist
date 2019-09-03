@@ -3,13 +3,18 @@ if(isset($_POST["data"])){
     $newTask = json_decode($_POST["data"]);
     $json = file_get_contents('todo.json');
     $jsonDecoded = json_decode($json, true);
+    //sanitization du text
+    $oldText = $newTask->text;
+    $valText = trim(filter_var($oldText, FILTER_SANITIZE_STRING));
+    $newTask->text = $valText;
+
+    if (empty($newTask->text)){
+        $vide = "0";
+        echo $vide;
+    }else{
     $jsonDecoded['increment']++;
 
     $newTask->id = $jsonDecoded['increment'];
-    //sanitization du text
-    $oldText = $newTask->text;
-    $valText = filter_var($oldText, FILTER_SANITIZE_STRING);
-    $newTask->text = $valText;
     // push
     array_push($jsonDecoded['items'], $newTask);
 
@@ -20,6 +25,8 @@ if(isset($_POST["data"])){
     //changer le state de la requête AJAX
     $dataSend = json_encode($newTask);
     echo $dataSend;
+    }
+
 }
 
 

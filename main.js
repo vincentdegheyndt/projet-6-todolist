@@ -19,22 +19,27 @@ document.getElementById("addTask").addEventListener('click', (e)=>{
     
     req.onreadystatechange = function(event){//déclenché par le echo dataSend
         if(this.readyState === XMLHttpRequest.DONE){
-            let reponse = JSON.parse(this.responseText);
-            let li = document.createElement("LI");
-            let textnode = document.createTextNode(reponse.text);
-            li.appendChild(textnode);
-            li.id = reponse.id;
-            li.onclick = function(){
-                    this.classList.toggle("checked");
-                    this.check == false? this.check = true : this.check=false;
-                    console.log(this.check);
-            };
-            li.classList.add('column');
-            li.setAttribute("draggable",true)
-            document.getElementById("columns").appendChild(li);
-            activity.value = "";
-            location.reload();
-            console.log(reponse.id)
+            if (this.responseText == 0){
+                alert("Champ vide")
+            }else{
+                let reponse = JSON.parse(this.responseText);
+                let li = document.createElement("LI");
+                let textnode = document.createTextNode(reponse.text);
+                li.appendChild(textnode);
+                li.id = reponse.id;
+                li.onclick = function(){
+                        this.classList.toggle("checked");
+                        this.check == false? this.check = true : this.check=false;
+                        console.log(this.check);
+                };
+                li.classList.add('column');
+                li.setAttribute("draggable",true)
+                document.getElementById("columns").appendChild(li);
+                activity.value = "";
+                location.reload();
+                console.log(reponse.id)
+            }
+
         }
     }
 

@@ -1,6 +1,7 @@
 # projet-6-todolist
 
 Project working.
+Deployed on [Heroku](https://todolistforbecode.herokuapp.com).
 
 A big thank you to [Frédérick Van Isschot](https://github.com/Fred-Vaniss) and [Corentin Deblock](https://github.com/CorentinDeblock) for their invaluable help;
 

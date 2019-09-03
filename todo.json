@@ -1,5 +1,5 @@
 {
-    "increment": 11,
+    "increment": 7,
     "items": [
         {
             "id": 1,
@@ -42,30 +42,6 @@
             "text": "premier essai de sanitisation",
             "check": false,
             "archive": true
-        },
-        {
-            "id": 8,
-            "text": "coder",
-            "check": false,
-            "archive": true
-        },
-        {
-            "id": 9,
-            "text": "wxxcvsqc",
-            "check": false,
-            "archive": false
-        },
-        {
-            "id": 10,
-            "text": "sdqsd",
-            "check": false,
-            "archive": false
-        },
-        {
-            "id": 11,
-            "text": "bbgb",
-            "check": false,
-            "archive": false
         }
     ]
 }
